@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Kate's Process Portfplio </title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+  <div id="intro">
+    <h1>The Process Portfplio</h1>
+    <h2> of <u2>Kate Vragova</u2>. </h2>
+  </div>
+  <div id="centr">
+    <img src="{% static 'images/1.jpeg' %}" height="533" width="400">
+  </div>
+  <div id="about">
+    <nav>
+      <ul>
+        <li><a href="#">About me</a>
+          <ul>
+            <li><a href="aboutme.html">Education</a></li>
+            <li><a href="aboutme2.html">Mission</a></li>
+            <li><a href="aboutme3.html">Portfolio</a></li>
+          </ul>
+        </li>
+        <li><a href="#">My works</a>
+          <ul>
+            <li><a href="works.html">Photo</a></li>
+            <li><a href="works2.html">Artworks</a></li>
+            </ul>
+        </li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div>
+    <div id="centr">
+      <h3><strong><u1>Here you can get acquainted with my education.</u1></strong></h3>
+    </div>
+  </div>
+
+  <div>
+    <div>
+        <ol>
+            <p">1) I graduated from high school in Russia.</p>
+            <div id="centr">
+                <video src="{% static 'images/IMG_7605.MOV' %}" controls width="840" height="472.5"></video>
+            </div>
+            <p"><br>2) Now I'm studing at a high school in Israel.<br></p>
+            <div id="centr">
+                <iframe width="840" height="472.5" src="https://www.youtube.com/embed/RMF5pdE-rBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </ol>
+    </div>
+    <div id="footer">
+        <div>
+            <a href="main.html">Back</a>
+            <a href="#intro">Up</a>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  <title>Kate's Process Portfplio</title>
+   <link rel="icon" href="{% static 'images/favicon.ico' %}">
+  <script src="password.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script>
+      $(document).ready(function() {
+          $('#main').submit(function(e) {
+              e.preventDefault();
+              var firstName = $('#firstName').val();
+              var lastName = $('#lastName').val();
+              var email = $('#email').val();
+              var login = $('#login').val();
+              var password = $('#password').val();
+              var repeatpassword = $('#repeatpassword').val();
+
+              $(".error").remove();
+
+
+              if (firstName.length < 1) {
+                $('#firstName').css('border', '4px double red' );
+
+                } else {
+                  $('#firstName').css('border', '4px solid green' );
+                }
+  
+              if (lastName.length < 1) {
+                $('#lastName').css('border', '4px double red' );
+
+                } else {
+                  $('#lastName').css('border', '4px solid green' );
+                }
+              if (email.length < 1) {
+                  $('#email').css('border', '4px double red' );
+              } else {
+                  var regEx = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
+                  var validEmail = regEx.test(email);
+                  if (!validEmail) {
+                      $('#email').after('<span class="error">Enter a valid email</span>');
+                  }
+              }
+              if (login.length < 1) {
+                  $('#login').css('border', '4px double red' );
+              }
+              else {
+                  $('#login').css('border', '4px solid green' );
+                }
+              if (password.length < 8) {
+                  $('#password').css('border', '4px double red' );
+              }
+              else {
+                  $('#password').css('border', '4px solid green' );
+                }
+              if (repeatpassword !== password) {
+                // alert("Error");
+                  $('#repeatpassword').after('<span class="error">Passwords must be same</span>');
+                  $('#repeatpassword').css('border', '4px double red' );
+              }
+              else {
+                  $('#repeatpassword').css('border', '4px solid green' );
+                  $('#password').css('border', '4px solid green' );
+                }
+          });
+      });
+  </script>
+</head>
+
+
+<body>
+  <button1 onclick="document.getElementById('id01').style.display='block'"><a>Sign in</a></button1><br><br>
+  <button2 onclick="document.getElementById('id02').style.display='block'"><a>Sign up</a></button2>
+  
+  <div id="intro">
+    <h1>The Process Portfplio</h1>
+    <h2> of <em>Kate Vragova.</em>  </h2>
+  </div>
+  <div id="centr">
+    <p><img src="{% static 'images/1.jpeg' %}"  height="533" width="400"></p>
+  </div>
+  <div id="about">
+    <nav>
+      <ul>
+        <li><a href="#">About me</a>
+          <ul class="widget-list">
+            <li><a href="aboutme.html">Education</a></li>
+            <li><a href="aboutme2.html">Mission</a></li>
+            <li><a href="aboutme3.html">Portfolio</a></li>
+          </ul>
+        </li>
+        <li><a href="#">My works</a>
+          <ul>
+            <li><a href="works.html">Photo</a></li>
+            <li><a href="works2.html">Artworks</a></li>
+          </ul>
+        </li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div>
+    <div id="centr">
+      <h3><strong>HI !!!</strong></h3>
+    <p class="in"><span class="main-font">My name is Ekaterina or just Kate.</span> <br><br>
+      However, I am better known by the pseudonym <u>Mouse</u>.
+      I've met a lot of interesting people in my life. They showed me and taught me their craft. 
+      So, I learned how to make designs for clothes, take pictures of people, and most importantly, 
+      I learned how to hook the viewer through artistic work and convey some disturbing issue through it. 
+      It is art that can change the world, so I chose to create!</p>
+    </div>
+
+    <div id="footer">
+      <div>
+       <a href="#intro">Up</a>
+      </div>
+     </div>
+  </div>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+  <form class="modal-content animate" action=" "onsubmit="validateForm()" method="post">
+
+    <div class="container">
+      <h1>Sign In</h1><br>
+      <div class="box1">
+        <p>Email</p>
+        <div>
+            <input type="Login" name="" id="" placeholder="Enter Username or email address">
+        </div>
+    </div>
+    <div class="box1">
+        <p>Password</p>
+        <div>
+            <input type="password" name="" id="" placeholder="Enter Your Password">
+        </div>
+    </div>
+      <button class="loginBtn">Login</button><br>
+      <label><input type="checkbox" checked="checked" name="remember"> Remember me</label><br><br>
+      <p class="text">Dont have an account? <a href="#">Sign up</a></p>
+    </div>
+  </form>
+</div>
+
+<div id="id02" class="modal2">
+  <span onclick="document.getElementById('id02').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+  <form name="myForm" class="modal-content2 animate2" id="main" autocomplete="off" method="post" action="">
+
+    <div class="container2">
+      <h1>Sign Up</h1><br>
+      <div class="box1">
+        <p>First Name</p>
+        <div>
+            <input type="firstName" name="firstName" id="firstName" placeholder="Enter Your First Name">
+        </div>
+      </div>
+      <div class="box1">
+        <p>Last Name</p>
+        <div>
+            <input type="lastName" name="lastName" id="lastName" placeholder="Enter Your Last Name">
+        </div>
+      </div>
+      <div class="box1">
+        <p>Email</p>
+        <div>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email">
+        </div>
+      </div>
+      <div class="box1">
+        <p>Login</p>
+        <div>
+            <input type="login" name="login" id="login" placeholder="Create Your Login">
+        </div>
+      </div>
+      <div class="box1">
+          <p>Password</p>
+          <div>
+              <input type="password" name="password" id="password" placeholder="Enter Your Password">
+          </div>
+      </div>
+      <div class="box1">
+        <p>Repeat Password</p>
+        <div>
+            <input type="password" name="repeatpassword" id="repeatpassword" placeholder="Enter Your Password">
+      </div>
+  </div>
+      <button class="createBtn">Create</button><br>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

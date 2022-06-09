@@ -1,0 +1,552 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css');
+
+
+body {
+  font-family: system-ui;
+  color: #38281d;
+  background: #f3e3c5;
+}
+
+#intro {
+  font-family: system-ui;
+  color: #38281d;
+  text-align: center;
+}
+
+#about {
+  color: white;
+  text-align: left;
+  font-family: monospace;
+}
+
+#centr {
+  text-align: center;
+}
+
+#footer {
+  position: fixed; 
+  left: 0; bottom: 0; 
+  color: #38281d;
+  width: 100%; 
+ }
+
+#footer div {
+  padding: 10px; 
+  background: #665f49; 
+ }
+
+
+.main-font {
+  color: #5c493c;
+  text-decoration: underline;
+}
+
+.font2 {
+  color: #5c493c;
+  text-decoration: underline;
+}
+
+u {
+  color: #e037bc;
+  text-decoration: bold;
+}
+
+u1 {
+  color: #c41589;
+  text-decoration: bold;
+}
+
+u2 {
+  text-decoration: underline;
+}
+
+.in {
+  font-family: "Lucida Grande";
+  text-align: centre;
+}
+
+.widget-list {
+  padding: 0;
+  list-style: none;
+}
+
+/* оформление меню */ 
+
+nav {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+  
+}
+
+nav ul {
+  padding:0;
+  margin:0;
+  list-style: none;
+  position: relative;
+  
+  }
+
+/* применяем inline-block позиционирование к элементам навигации */
+nav ul li {
+  margin: 0px -7px 0 0;
+  display: inline-block;
+  background: rgb(219, 207, 183);
+  }
+
+/* стилизуем ссылки */
+nav a {
+  display: block;
+  padding: 0 10px;
+  color:#38281d;
+  font-size:20px;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+/* изменяем цвет фона при наведении курсора */
+nav a:hover {
+  background-color: #998772;
+}
+
+/* скрываем выпадающие списки по умолчанию
+     * и задаем абсолютное позиционирование */
+     nav ul ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+  }
+  
+  /* отображаем выпадающий список при наведении */
+  nav ul li:hover > ul {
+      display: inherit;
+  }
+  
+  /* первый уровень выпадающего списка */
+  nav ul ul li {
+      min-width:170px;
+      float: none;
+      display:list-item;
+      position: relative;
+  }
+
+  /* измените ' +' на любой другой символ, если нужно
+*/
+    li > a:after { content:  '↓'; }
+    li > a:only-child:after { content: ''; }
+
+
+    form {
+      border: 3px solid #f1f1f1;
+  }
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+  }
+
+
+  button1 {
+    color: #38281d;
+    padding: 7px 20px;
+    margin-left: 80%;
+    cursor: pointer;
+    width: 100%;
+    background-color: #f3e3c5;
+    border: 2px solid #5c4e3a;
+    border-radius: 10px;
+}
+
+button1 a:hover {
+  color: #967865;
+}
+ 
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+      span.psw {
+          display: block;
+          float: none;
+      }
+      .cancelbtn {
+          width: 20%;
+      }
+  }
+
+  /* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+padding-top: 100px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+margin: 5px auto; /* 15% from the top and centered */
+border: 1px solid #888;
+width: 35%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+/* Position it in the top right corner outside of the modal */
+position: absolute;
+right: 25px;
+top: 0;
+color: #000;
+font-size: 35px;
+font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+color: red;
+cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+-webkit-animation: animatezoom 0.6s;
+animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+from {-webkit-transform: scale(0)}
+to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+from {transform: scale(0)}
+to {transform: scale(1)}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    background: rgb(15, 15, 15);
+    width: 350px;
+    height: 450px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+}
+
+
+.heading{
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+.box1 {
+    margin: 0.2em 0;
+}
+.container .box1 p{
+    color: rgba(255, 255, 255, 0.781);
+}
+.container .box1 div{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 0.5em 0;
+}
+.container .box1 input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(19, 19, 19);
+    color: white;
+    border: none;
+    outline: none;
+    padding-left: 0.8em;
+    border-radius: 10px;
+    transition: all .4s
+}
+
+.container .box1 input:focus::placeholder{
+    color: white;
+}
+.container .box1 div::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 102%;
+    height: 105%;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+.loginBtn{
+    width: 102%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    margin: 0.5em 0;
+    transform: translate(-1%);
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    transition: all .4s;
+}
+
+.loginBtn:hover{
+    transform: translate(-1%, 5%);
+    box-shadow: 0 0 10px #ff416d65;
+}
+.text{
+    font-size: 0.8em;
+    margin-top: 0.5em;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.623);
+}
+.text a{
+    color: rgba(255, 255, 255, 0.911);
+}
+
+
+button2 {
+  color: #38281d;
+  padding: 7px 20px;
+  margin-left: 80%;
+  cursor: pointer;
+  width: 100%;
+  background-color: #f3e3c5;
+  border: 2px solid #5c4e3a;
+  border-radius: 10px;
+}
+
+button2 a:hover {
+color: #967865;
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 20%;
+    }
+}
+
+/* The Modal (background) */
+.modal2 {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+padding-top: 100px;
+}
+
+/* Modal Content/Box */
+.modal-content2 {
+margin: 5px auto; /* 15% from the top and centered */
+border: 1px solid #888;
+width: 35%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+/* Position it in the top right corner outside of the modal */
+position: absolute;
+right: 25px;
+top: 0;
+color: #000;
+font-size: 35px;
+font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+color: red;
+cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate2 {
+-webkit-animation: animatezoom 0.6s;
+animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+from {-webkit-transform: scale(0)}
+to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+from {transform: scale(0)}
+to {transform: scale(1)}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container2{
+  background: rgb(15, 15, 15);
+  width: 350px;
+  height: 700px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 2em;
+}
+
+
+.heading{
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.box1 {
+  margin: 0.2em 0;
+}
+.container2 .box1 p{
+  color: rgba(255, 255, 255, 0.781);
+}
+.container2 .box1 div{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin: 0.5em 0;
+}
+.container2 .box1 input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(19, 19, 19);
+  color: white;
+  border: none;
+  outline: none;
+  padding-left: 0.8em;
+  border-radius: 10px;
+  transition: all .4s
+}
+
+.container2 .box1 input:focus::placeholder{
+  color: white;
+}
+.container2 .box1 div::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 102%;
+  height: 105%;
+  border-radius: 10px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+.createBtn{
+  width: 102%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  margin: 0.5em 0;
+  transform: translate(-1%);
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  transition: all .4s;
+}
+
+.createBtn:hover{
+  transform: translate(-1%, 5%);
+  box-shadow: 0 0 10px #ff416d65;
+}
+.text{
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.623);
+}
+.text a{
+  color: rgba(255, 255, 255, 0.911);
+}
+
+.error {
+  color: red;
+  margin-left: 5px;
+}
+
+label.error {
+  display: inline;
+}
+
+
+.container3 {
+  background: #a99276;
+  width: 700px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 2em;
+  position: absolute;
+}
+
+
+input[type=text]{
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: block;
+  background: #f1f1f1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type=text]:focus{
+  background-color: #ddd;
+  border: 1px rgb(194, 219, 195);
+}
+
+
+.form__send {
+  background-color: #473f32;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+}
+
